@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/main_background">
+
+    <!-- Username Input Section -->
+    <LinearLayout
+        android:id="@+id/username_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible">
+
+        <EditText
+
+            android:id="@+id/username_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter username"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:background="@drawable/text_bg"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/AppButtonStyle"
+            android:id="@+id/btn_set_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Username"
+            android:background="@drawable/allbtn_bg"/>
+    </LinearLayout>
+
+    <!-- Posting Section -->
+    <LinearLayout
+        android:id="@+id/posting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/username_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, "
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/post_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What's on your mind?"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Post" />
+    </LinearLayout>
+
+    <!-- Posts Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_posts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/posting_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

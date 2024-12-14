@@ -1,0 +1,36 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_view_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:text="Sample Question"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <TextView
+            android:id="@+id/text_view_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Sample Answer"
+            android:textColor="?android:attr/textColorSecondary" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

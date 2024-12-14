@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:background="@drawable/main_background">
+
+    <!-- AppBarLayout containing the Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background"
+            android:title="Menu"
+            android:titleTextColor="@android:color/white"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main content area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        tools:ignore="UselessParent">
+
+        <!-- Balance Display -->
+        <TextView
+            android:id="@+id/moneyDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance: ₱0.00"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <!-- Income Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/incomeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#3F51B5"
+                android:textColor="@android:color/white"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_income"
+                app:iconPadding="8dp"
+                app:iconGravity="start" />
+
+            <!-- Withdraw Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/withdrawButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Withdraw"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_withdraw"
+                app:iconPadding="8dp"
+                app:iconGravity="start" />
+
+            <!-- Download History Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/downloadHistoryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Download File History"
+                android:backgroundTint="#03A9F4"
+                android:textColor="@android:color/white"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_history"
+                app:iconPadding="8dp"
+                app:iconGravity="start" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

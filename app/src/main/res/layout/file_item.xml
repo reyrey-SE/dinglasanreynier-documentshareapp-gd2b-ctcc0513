@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/linear_bg"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp">
+
+    <!-- File Name -->
+    <TextView
+        android:id="@+id/text_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textColor="#000000" />
+
+    <!-- File Size -->
+    <TextView
+        android:id="@+id/text_file_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Size: Unknown"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Horizontal Layout for Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:weightSum="3">
+
+        <!-- Buy Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buy"
+            android:background="@drawable/buy_btn"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Add to Favorites Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_favorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favorite"
+            android:background="@drawable/fav_btn"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Download Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Download"
+            android:background="@drawable/dl_btn"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Download Count -->
+    <TextView
+        android:id="@+id/text_download_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downloads: 0"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+</LinearLayout>

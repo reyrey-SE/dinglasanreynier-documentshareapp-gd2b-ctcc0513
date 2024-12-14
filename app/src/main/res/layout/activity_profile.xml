@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/main_background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/header_background"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/black"/>
+
+    <!-- Name Field -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:background="@drawable/text_bg"
+        android:id="@+id/text_view_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:textColor="#ffffff"/>
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+    <!-- Email Field -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:background="@drawable/text_bg"
+        android:id="@+id/text_view_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:textColor="#ffffff"/>
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+    <!-- Edit/Save Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/AppButtonStyle"
+        android:id="@+id/button_edit_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/allbtn_bg"/>
+</LinearLayout>

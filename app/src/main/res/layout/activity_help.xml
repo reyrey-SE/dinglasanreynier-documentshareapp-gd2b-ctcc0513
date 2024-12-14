@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/main_background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/header_background"
+        android:theme="?attr/actionBarTheme" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search FAQs"
+        android:padding="8dp"
+        android:background="@drawable/text_bg"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"/>
+
+    <!-- FAQ List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_faq"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"/>
+
+    <!-- Contact Support Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/AppButtonStyle"
+        android:id="@+id/button_contact_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Support"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/allbtn_bg"
+        android:textColor="@android:color/white" />
+</LinearLayout>

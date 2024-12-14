@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/main_background">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download History"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="16dp" />
+
+    <ListView
+        android:id="@+id/listViewDownloadHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/white"
+        android:dividerHeight="0.5dp"
+        android:scrollingCache="true"
+        android:choiceMode="singleChoice" />
+</LinearLayout>
